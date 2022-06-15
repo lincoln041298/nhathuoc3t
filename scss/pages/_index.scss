@@ -347,7 +347,9 @@
           padding: 1rem 2rem;
           border-radius: 9999px;
           cursor: pointer;
-
+          @include maxWidth(480px) {
+            padding: .5rem 2rem;
+          }
           &:hover {
             text-decoration: underline;
           }
@@ -395,7 +397,6 @@
         display: flex;
         justify-content: space-between;
         @include resetcontainer;
-
         @include maxWidth(640px) {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
@@ -422,7 +423,7 @@
           font-weight: 500;
           font-size: 1.6rem;
           line-height: 2rem;
-          @include maxWidth(768px) {
+          @include maxWidth(966px) {
             font-weight: 500;
             font-size: 1rem;
             line-height: 2rem;
@@ -433,7 +434,7 @@
           font-weight: 300;
           font-size: 1.3rem;
           line-height: 2rem;
-          @include maxWidth(768px) {
+          @include maxWidth(966px) {
             font-weight: 300;
             font-size: .8rem;
             line-height: 2rem;

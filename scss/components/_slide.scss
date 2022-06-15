@@ -102,7 +102,7 @@
 
     &__extend {
       top: 2rem;
-      right: 9.6rem;
+      right: 10.6rem;
       @include maxWidth(480px) {
         right: inherit;
         top: 22rem;

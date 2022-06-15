@@ -9346,6 +9346,11 @@ button {
     .pharmacy__authetic--img1, .pharmacy__authetic--img2 {
       width: 3.5rem;
       height: 3.4rem; } }
+  @media screen and (max-width: 480px) {
+    .pharmacy__authetic--img1, .pharmacy__authetic--img2 {
+      margin: 1rem;
+      width: 3.5rem;
+      height: 3.4rem; } }
 
 .pharmacy__authetic--img3 {
   width: 3.751rem;
@@ -9354,12 +9359,22 @@ button {
     .pharmacy__authetic--img3 {
       width: 3.6rem;
       height: 3.4rem; } }
+  @media screen and (max-width: 480px) {
+    .pharmacy__authetic--img3 {
+      margin: 1rem;
+      width: 3.6rem;
+      height: 3.4rem; } }
 
 .pharmacy__authetic--img4 {
   width: 10.616rem;
   height: 4.4rem; }
   @media screen and (max-width: 768px) {
     .pharmacy__authetic--img4 {
+      width: 9.616rem;
+      height: 3.4rem; } }
+  @media screen and (max-width: 480px) {
+    .pharmacy__authetic--img4 {
+      margin: 1rem;
       width: 9.616rem;
       height: 3.4rem; } }
 
@@ -9460,7 +9475,7 @@ button {
     right: 8rem; }
     .pharmacy__bestsale .swiper-button-leftmain__extend {
       top: 2rem;
-      right: 9.6rem; }
+      right: 10.6rem; }
       @media screen and (max-width: 480px) {
         .pharmacy__bestsale .swiper-button-leftmain__extend {
           right: inherit;
@@ -10402,6 +10417,9 @@ button {
     padding: 1rem 2rem;
     border-radius: 9999px;
     cursor: pointer; }
+    @media screen and (max-width: 480px) {
+      .main .pharmacy__tag .hot-search span {
+        padding: .5rem 2rem; } }
     .main .pharmacy__tag .hot-search span:hover {
       text-decoration: underline; }
     .main .pharmacy__tag .hot-search span:not(:first-child) {
@@ -10457,7 +10475,7 @@ button {
       font-weight: 500;
       font-size: 1.6rem;
       line-height: 2rem; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 966px) {
         .main .pharmacy__authetic--lastone h3, .main .pharmacy__authetic--lastone .h3 {
           font-weight: 500;
           font-size: 1rem;
@@ -10466,7 +10484,7 @@ button {
       font-weight: 300;
       font-size: 1.3rem;
       line-height: 2rem; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 966px) {
         .main .pharmacy__authetic--lastone p {
           font-weight: 300;
           font-size: .8rem;
