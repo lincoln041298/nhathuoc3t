@@ -59,12 +59,28 @@
       margin-bottom: 7.8rem;
     }
 
+    &__muticolor {
+      background: linear-gradient(180deg, #02D5AF 0%, #9076F9 85.42%, #F976DC 100%);
+      border-radius: 20px;
+      padding: 2.4rem 3rem;
+    }
+
     &__title {
       text-transform: uppercase;
       font-weight: 700;
       font-size: 2.8rem;
       line-height: 3.4rem;
       margin-bottom: 4.8rem;
+
+      &--extend {
+        text-transform: inherit;
+        color: var(--color-grey-light-0);
+        background-image: url(../../img/svg/hotsale.svg);
+        background-size: 18px;
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 3rem;        
+      }
       @include maxWidth(768px) {
         font-size: 2rem;
         line-height: 3rem;

@@ -10,16 +10,17 @@
     @include maxWidth(640px) {
       text-align: center;
      }
-    img {
-      width: 9.1rem;
-      height: 6rem;
-      @include maxWidth(966px) {
-        width: 7.5rem;
-      }
-      @include maxWidth(768px) {
-        width: 6.5rem;
-      }
-    }
+     width: 9.1rem;
+     height: 6rem;
+     @include maxWidth(966px) {
+       width: 7.5rem;
+     }
+     @include maxWidth(768px) {
+       width: 6.5rem;
+     }
+     img {
+       width: 100%;
+     }
   }
 
   &__navbar {
@@ -36,6 +37,10 @@
       justify-content: center;
     }
     @include maxWidth(640px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include maxWidth(480px) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
@@ -65,6 +70,7 @@
     @include maxWidth(640px) {
       justify-content: start;
     }
+    
     display: flex;
     justify-content: center;
 
