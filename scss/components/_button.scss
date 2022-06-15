@@ -1,0 +1,181 @@
+.button-accept {
+  margin-left: 4.9rem;
+  padding: 1.6rem;
+  border-radius: 1rem;
+  background-color: var(--color-grey-light-0);
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  border: 1px solid var(--color-grey-light-0);
+  color: var(--color-grey-dark-1);
+  cursor: pointer;
+  transition: all 0.2s;
+  @include maxWidth(1537px) {
+    margin-left: 3.5rem;
+  }
+  @include maxWidth(1097px) {
+    margin-left: 3.5rem;
+    padding: 1.3rem;
+  }
+  @include maxWidth(966px) {
+    margin-left: 3.5rem;
+    padding: 1rem;
+  }
+
+  @include maxWidth(768px) {
+    margin-left: 2.2rem;
+    padding: 1rem;
+  }
+  @include maxWidth(640px) {
+    margin-left: 3.9rem;
+    margin-right: 3.9rem;
+    padding: 0.8rem;
+  }
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-grey-light-0);
+  }
+}
+
+.button-open,
+.button-close {
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background-color: var(--color-primary);
+  color: var(--color-grey-light-0);
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-close {
+  display: flex;
+  align-items: flex-end;
+  margin: 1rem;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+::placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.btns-contact {
+  position: fixed;
+  right: 4rem;
+  bottom: 10%;
+  width: 100%;
+  @include maxWidth(640px) {
+    bottom: 4%;
+  }
+  z-index: 1;
+  .social-btns {
+    display: flex;
+    justify-content: space-between;
+    &__calltome {
+      position: relative;
+      // &--img1 {
+      //   position: absolute;
+      //   width: 15.4rem;
+      //   height: 15.4rem;
+      //   left: -10rem;
+      // }
+
+      &--img2 {
+        position: absolute;
+        width: 22.8rem;
+        height: 9.8rem;
+        left: -7rem;
+        top: 3.5rem;
+        z-index: 1;
+        @include maxWidth(1536px) {
+          left: 5rem;
+        }
+        @include maxWidth(1280px) {
+          left: 4rem;
+        }
+        @include maxWidth(640px) {
+          width: 14.8rem;
+          height: 6.8rem;
+        }
+      }
+
+      &--img3 {
+        position: absolute;
+        width: 3rem;
+        height: 3rem;
+        left: -3.2rem;
+        top: 6.5rem;
+        z-index: 1;
+        @include maxWidth(1536px) {
+          left: 8.4rem;
+        }
+        @include maxWidth(1280px) {
+          left: 7.5rem;
+        }
+        @include maxWidth(640px) {
+          top: 5.3rem;
+          left: 6rem;
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+      }
+
+      .numberphone {
+        position: absolute;
+        left: 1rem;
+        top: 7.2rem;
+        font-weight: 700;
+        font-size: 1.7rem;
+        line-height: 2.1rem;
+        width: 12rem;
+        color: var(--color-grey-light-0);
+        text-decoration: none;
+        z-index: 1;
+        @include maxWidth(1536px) {
+          left: 13.2rem;
+        }
+        @include maxWidth(1280px) {
+          left: 13rem;
+        }
+        @include maxWidth(640px) {
+          top: 6rem;
+          left: 10rem;
+          font-size: 1rem;
+          line-height: 1.6rem;
+          width: 7rem;
+        }
+      }
+    }
+
+    &__social {
+      display: flex;
+      flex-direction: column;
+      margin-right: -10rem;
+      z-index: 1;
+      @include maxWidth(1536px) {
+        margin-right: 0rem;
+      }
+      @include maxWidth(1280px) {
+        margin-right: 0rem;
+      }
+      @include maxWidth(1280px) {
+        margin-right: -3rem;
+      }
+      img {
+        width: 5rem;
+        height: 5rem;
+        @include maxWidth(1280px) {
+          width: 3.5rem;
+          height: 3.5rem;
+        }
+      }
+    }
+  }
+}

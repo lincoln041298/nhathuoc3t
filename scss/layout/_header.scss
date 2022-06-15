@@ -1,0 +1,226 @@
+.header {
+  height: 11.6rem;
+  width: 100%;
+  background: linear-gradient(180deg, #cd151c -38.4%, #7b050a 197.99%);
+}
+
+.header {
+  &__logo {
+    margin-right: 1.5rem;
+    @include maxWidth(640px) {
+      text-align: center;
+     }
+    img {
+      width: 9.1rem;
+      height: 6rem;
+      @include maxWidth(966px) {
+        width: 7.5rem;
+      }
+      @include maxWidth(768px) {
+        width: 6.5rem;
+      }
+    }
+  }
+
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    @include maxWidth(1097px) {
+      justify-content: center;
+    }
+    @include maxWidth(640px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .search {
+    flex: 0 0 57%;
+    @include maxWidth(1536px) {
+      flex: 0 0 57%;
+    }
+
+    @include maxWidth(1280px) {
+      flex: 0 0 48%;
+    }
+
+    @include maxWidth(1097px) {
+      flex: 0 0 43%;
+    }
+
+    @include maxWidth(966px) {
+      flex: 0 0 30%;
+    }
+
+    @include maxWidth(768px) {
+      flex: 0 0 30%;
+    }
+    @include maxWidth(640px) {
+      justify-content: start;
+    }
+    display: flex;
+    justify-content: center;
+
+    &__input {
+      border: none;
+      background-color: var(--color-grey-light-0);
+      padding: 2.15rem 2rem;
+      @include maxWidth(1280px) {
+        padding: 1.6rem 2rem;
+      }
+
+      @include maxWidth(768px) {
+        padding: 1rem 2rem;
+      }
+      padding-right: 4.5rem;
+      border-radius: 100px;
+      width: 100%;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+      margin-right: -3.7rem;
+      font-size: 1.5rem;
+      &::-webkit-input-placeholder {
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 2.4rem;
+      }
+
+      &:focus {
+        outline: none;
+        // width: 100%;
+      }
+    }
+
+    &__button {
+      border: none;
+      background-color: transparent;
+    }
+    &__icon {
+      font-size: 1.5rem;
+
+      color: var(--color-primary);
+    }
+  }
+
+  &__otherbutton {
+    margin-left: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-grey-light-0);
+    position: relative;
+    @include maxWidth(630px) {
+      justify-content: center;
+     }
+    img {
+      width: 2.4rem;
+      height: 2.4rem;
+      cursor: pointer;
+      @include maxWidth(720px) {
+        width: 1.4rem;
+        height: 1.4rem;
+      }
+      @include maxWidth(640px) {
+        width: 1.4rem;
+        height: 1.4rem;
+      } 
+    }
+
+    &--img {
+      transition: all .2s;
+    }
+
+    &--img:hover + &--text {
+      display: block;
+      position: absolute;
+      bottom: -4rem;
+      background-color: var(--color-grey-light-0);
+      color: var(--color-primary);
+      padding: .5rem;
+      border-radius: .6rem;
+    }
+
+    &--text {
+      margin-left: 0.8rem;
+      cursor: pointer;
+      @include maxWidth(640px) {
+        display: none;
+      }
+      p {
+        font-weight: 500;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        @include maxWidth(768px) {
+          font-size: 0.8rem;
+          line-height: 1.5rem;
+        }
+
+        &:last-child {
+          font-weight: 600;
+          font-size: 1.5rem;
+          line-height: 2.2rem;
+          @include maxWidth(768px) {
+            font-size: 1rem;
+            line-height: 2rem;
+          }
+          @include maxWidth(640px) {
+            line-height: 1rem;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &__cart {
+    display: flex;
+    @include maxWidth(640px) {
+     align-items: center;
+    }
+    &--img {
+      position: relative;
+      display: block;
+
+      .circle-tick {
+        position: absolute;
+        right: -8px;
+        top: -7px;
+        font-size: 0.8rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        background-color: var(--color-grey-light-0);
+        color: var(--color-primary);
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include maxWidth(640px) {
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+      }
+    }
+    p {
+      cursor: pointer;
+
+      margin-left: 1.5rem;
+      line-height: 2.5rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
