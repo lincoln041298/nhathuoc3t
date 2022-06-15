@@ -57,6 +57,10 @@
     .container {
       margin-top: 4.8rem;
       margin-bottom: 7.8rem;
+      @include maxWidth(480px) {
+        margin-top: 2.8rem;
+        margin-bottom: 4.8rem;
+      }
     }
 
     &__muticolor {
@@ -95,6 +99,9 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         row-gap: 3rem;
+      }
+      @include maxWidth(640px) {
+        margin-bottom: 3.4rem;
       }
       &--advise {
         display: flex;
@@ -299,6 +306,11 @@
     &__bestsale {
       margin-top: 6.4rem;
       margin-bottom: 6.4rem;
+
+      @include maxWidth(480px) {
+        margin-top: 0rem;
+        margin-bottom: 3.4rem;
+      }
     }
 
     &__tag {
@@ -399,10 +411,12 @@
           column-gap: .6rem;
         }
         @include maxWidth(640px) {
-          padding-left: 7rem;
+          padding-left: 0rem;
+          flex-direction: column;
         }
         @include maxWidth(480px) {
           padding-left: 0rem;
+          flex-direction: column;
         }
         h3 {
           font-weight: 500;

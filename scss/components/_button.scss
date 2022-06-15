@@ -24,6 +24,7 @@
   @include maxWidth(768px) {
     margin-left: 2.2rem;
     padding: 1rem;
+    display: none;
   }
   @include maxWidth(640px) {
     margin-left: 3.9rem;

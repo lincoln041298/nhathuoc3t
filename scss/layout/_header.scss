@@ -36,20 +36,12 @@
     @include maxWidth(1097px) {
       justify-content: center;
     }
-    @include maxWidth(640px) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @include maxWidth(480px) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
   }
 
   .search {
     flex: 0 0 57%;
     @include maxWidth(1536px) {
-      flex: 0 0 57%;
+      flex: 0 0 54%;
     }
 
     @include maxWidth(1280px) {
@@ -57,7 +49,7 @@
     }
 
     @include maxWidth(1097px) {
-      flex: 0 0 43%;
+      flex: 0 0 42%;
     }
 
     @include maxWidth(966px) {
@@ -65,11 +57,13 @@
     }
 
     @include maxWidth(768px) {
-      flex: 0 0 30%;
+      flex: 0 0 39%;
     }
-    @include maxWidth(640px) {
-      justify-content: start;
+
+    @include maxWidth(480px) {
+      flex: 0 0 39%;
     }
+   
     
     display: flex;
     justify-content: center;
@@ -83,7 +77,13 @@
       }
 
       @include maxWidth(768px) {
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
+      }
+
+      @include maxWidth(480px) {
+        padding: 1rem 0rem;
+        padding-left: 1.5rem;
+        padding-right: 2.2rem;
       }
       padding-right: 4.5rem;
       border-radius: 100px;
@@ -92,10 +92,20 @@
       transition: all 0.2s;
       margin-right: -3.7rem;
       font-size: 1.5rem;
+      @include maxWidth(480px) {
+        margin-right: -2.1rem;
+        font-size: 1rem;
+      }
       &::-webkit-input-placeholder {
         font-weight: 400;
         font-size: 1.5rem;
         line-height: 2.4rem;
+
+        @include maxWidth(480px) {
+          font-size: 1rem;
+          display: flex;
+          line-height: 1.2rem;
+        }
       }
 
       &:focus {
@@ -125,21 +135,13 @@
     @include maxWidth(630px) {
       justify-content: center;
      }
-    img {
-      width: 2.4rem;
-      height: 2.4rem;
-      cursor: pointer;
-      @include maxWidth(720px) {
-        width: 1.4rem;
-        height: 1.4rem;
-      }
-      @include maxWidth(640px) {
-        width: 1.4rem;
-        height: 1.4rem;
-      } 
-    }
+
+     img {
+       width: 100%;
+     }
 
     &--img {
+      width: 2.42rem;
       transition: all .2s;
     }
 
@@ -218,12 +220,15 @@
         }
       }
     }
-    p {
+    .cart-alone {
       cursor: pointer;
 
       margin-left: 1.5rem;
       line-height: 2.5rem;
 
+      @include maxWidth(640px) {
+        display: none;
+      }
       &:hover {
         text-decoration: underline;
       }

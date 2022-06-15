@@ -107,6 +107,10 @@
       font-weight: 700;
       font-size: 1.6rem;
       line-height: 2.4rem;
+      @include maxWidth(480px) {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+      }
     }
     p {
       padding: 1.2rem 0;
@@ -145,6 +149,10 @@
 
       @include maxWidth(630px) {
         width: 50%;
+      }
+
+      @include maxWidth(480px) {
+        width: 58%;
       }
     }
 

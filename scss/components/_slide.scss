@@ -50,6 +50,7 @@
     @include maxWidth(630px) {
       left: 2rem;
     }
+    
     z-index: 10;
   }
 
@@ -87,6 +88,12 @@
     &__extend {
       top: 2rem;
       right: 5rem;
+      @include maxWidth(480px) {
+        left: inherit;
+        top: 22rem;
+        right: 1rem;
+        z-index: 3;
+      }
     }
     right: 0;
   }
@@ -96,8 +103,13 @@
     &__extend {
       top: 2rem;
       right: 9.6rem;
+      @include maxWidth(480px) {
+        right: inherit;
+        top: 22rem;
+        left: 1rem;
+        z-index: 3;
+      }
     }
-
     right: 8rem;
   }
 

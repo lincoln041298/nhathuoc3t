@@ -9206,7 +9206,8 @@ body {
   @media screen and (max-width: 768px) {
     .button-accept {
       margin-left: 2.2rem;
-      padding: 1rem; } }
+      padding: 1rem;
+      display: none; } }
   @media screen and (max-width: 640px) {
     .button-accept {
       margin-left: 3.9rem;
@@ -9366,6 +9367,10 @@ button {
   margin: 0 1.6rem;
   border-right: 1px solid var(--color-grey-light-0);
   height: 2.4rem; }
+  @media screen and (max-width: 1536px) {
+    .mini-line {
+      margin: 0 1rem;
+      height: 2rem; } }
   @media screen and (max-width: 640px) {
     .mini-line {
       margin: 0 1rem;
@@ -9445,11 +9450,23 @@ button {
     .pharmacy__bestsale .swiper-button-rightmain__extend {
       top: 2rem;
       right: 5rem; }
+      @media screen and (max-width: 480px) {
+        .pharmacy__bestsale .swiper-button-rightmain__extend {
+          left: inherit;
+          top: 22rem;
+          right: 1rem;
+          z-index: 3; } }
   .pharmacy__bestsale .swiper-button-leftmain {
     right: 8rem; }
     .pharmacy__bestsale .swiper-button-leftmain__extend {
       top: 2rem;
       right: 9.6rem; }
+      @media screen and (max-width: 480px) {
+        .pharmacy__bestsale .swiper-button-leftmain__extend {
+          right: inherit;
+          top: 22rem;
+          left: 1rem;
+          z-index: 3; } }
   .pharmacy__bestsale .swiper-pagination-custom {
     display: flex;
     align-items: center;
@@ -9841,6 +9858,10 @@ button {
       font-weight: 700;
       font-size: 1.6rem;
       line-height: 2.4rem; }
+      @media screen and (max-width: 480px) {
+        .footer-main__menunav h3, .footer-main__menunav .h3 {
+          margin-top: 3rem;
+          margin-bottom: 1rem; } }
     .footer-main__menunav p {
       padding: 1.2rem 0;
       font-weight: 400;
@@ -9877,6 +9898,9 @@ button {
     @media screen and (max-width: 630px) {
       .footer-main__social .calltome {
         width: 50%; } }
+    @media screen and (max-width: 480px) {
+      .footer-main__social .calltome {
+        width: 58%; } }
   .footer-main__social--title {
     padding-left: .8rem; }
     .footer-main__social--title p {
@@ -9925,14 +9949,6 @@ button {
   @media screen and (max-width: 1097px) {
     .header .container {
       justify-content: center; } }
-  @media screen and (max-width: 640px) {
-    .header .container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); } }
-  @media screen and (max-width: 480px) {
-    .header .container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); } }
 
 .header .search {
   flex: 0 0 57%;
@@ -9940,22 +9956,22 @@ button {
   justify-content: center; }
   @media screen and (max-width: 1536px) {
     .header .search {
-      flex: 0 0 57%; } }
+      flex: 0 0 54%; } }
   @media screen and (max-width: 1280px) {
     .header .search {
       flex: 0 0 48%; } }
   @media screen and (max-width: 1097px) {
     .header .search {
-      flex: 0 0 43%; } }
+      flex: 0 0 42%; } }
   @media screen and (max-width: 966px) {
     .header .search {
       flex: 0 0 30%; } }
   @media screen and (max-width: 768px) {
     .header .search {
-      flex: 0 0 30%; } }
-  @media screen and (max-width: 640px) {
+      flex: 0 0 39%; } }
+  @media screen and (max-width: 480px) {
     .header .search {
-      justify-content: start; } }
+      flex: 0 0 39%; } }
   .header .search__input {
     border: none;
     background-color: var(--color-grey-light-0);
@@ -9972,11 +9988,25 @@ button {
         padding: 1.6rem 2rem; } }
     @media screen and (max-width: 768px) {
       .header .search__input {
-        padding: 1rem 2rem; } }
+        padding: 1rem 1rem; } }
+    @media screen and (max-width: 480px) {
+      .header .search__input {
+        padding: 1rem 0rem;
+        padding-left: 1.5rem;
+        padding-right: 2.2rem; } }
+    @media screen and (max-width: 480px) {
+      .header .search__input {
+        margin-right: -2.1rem;
+        font-size: 1rem; } }
     .header .search__input::-webkit-input-placeholder {
       font-weight: 400;
       font-size: 1.5rem;
       line-height: 2.4rem; }
+      @media screen and (max-width: 480px) {
+        .header .search__input::-webkit-input-placeholder {
+          font-size: 1rem;
+          display: flex;
+          line-height: 1.2rem; } }
     .header .search__input:focus {
       outline: none; }
   .header .search__button {
@@ -9997,18 +10027,9 @@ button {
     .header__otherbutton {
       justify-content: center; } }
   .header__otherbutton img {
-    width: 2.4rem;
-    height: 2.4rem;
-    cursor: pointer; }
-    @media screen and (max-width: 720px) {
-      .header__otherbutton img {
-        width: 1.4rem;
-        height: 1.4rem; } }
-    @media screen and (max-width: 640px) {
-      .header__otherbutton img {
-        width: 1.4rem;
-        height: 1.4rem; } }
+    width: 100%; }
   .header__otherbutton--img {
+    width: 2.42rem;
     transition: all .2s; }
   .header__otherbutton--img:hover + .header__otherbutton--text {
     display: block;
@@ -10074,11 +10095,14 @@ button {
         .header__cart--img .circle-tick {
           height: 1.5rem;
           width: 1.5rem; } }
-  .header__cart p {
+  .header__cart .cart-alone {
     cursor: pointer;
     margin-left: 1.5rem;
     line-height: 2.5rem; }
-    .header__cart p:hover {
+    @media screen and (max-width: 640px) {
+      .header__cart .cart-alone {
+        display: none; } }
+    .header__cart .cart-alone:hover {
       text-decoration: underline; }
 
 .main .choosen-health {
@@ -10130,6 +10154,10 @@ button {
 .main .pharmacy .container {
   margin-top: 4.8rem;
   margin-bottom: 7.8rem; }
+  @media screen and (max-width: 480px) {
+    .main .pharmacy .container {
+      margin-top: 2.8rem;
+      margin-bottom: 4.8rem; } }
 
 .main .pharmacy__muticolor {
   background: linear-gradient(180deg, #02D5AF 0%, #9076F9 85.42%, #F976DC 100%);
@@ -10164,6 +10192,9 @@ button {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       row-gap: 3rem; } }
+  @media screen and (max-width: 640px) {
+    .main .pharmacy__easytobuy {
+      margin-bottom: 3.4rem; } }
   .main .pharmacy__easytobuy--advise {
     display: flex;
     flex: 0 0 68%;
@@ -10337,6 +10368,10 @@ button {
 .main .pharmacy__bestsale {
   margin-top: 6.4rem;
   margin-bottom: 6.4rem; }
+  @media screen and (max-width: 480px) {
+    .main .pharmacy__bestsale {
+      margin-top: 0rem;
+      margin-bottom: 3.4rem; } }
 
 .main .pharmacy__tag .hot-search {
   font-weight: 300;
@@ -10412,10 +10447,12 @@ button {
         column-gap: .6rem; } }
     @media screen and (max-width: 640px) {
       .main .pharmacy__authetic--lastone {
-        padding-left: 7rem; } }
+        padding-left: 0rem;
+        flex-direction: column; } }
     @media screen and (max-width: 480px) {
       .main .pharmacy__authetic--lastone {
-        padding-left: 0rem; } }
+        padding-left: 0rem;
+        flex-direction: column; } }
     .main .pharmacy__authetic--lastone h3, .main .pharmacy__authetic--lastone .h3 {
       font-weight: 500;
       font-size: 1.6rem;
