@@ -9255,46 +9255,23 @@ button {
   .btns-contact .social-btns {
     display: flex;
     justify-content: space-between; }
+    .btns-contact .social-btns img {
+      max-width: 100%; }
     .btns-contact .social-btns__calltome {
       position: relative; }
-      .btns-contact .social-btns__calltome--img2 {
-        position: absolute;
-        width: 22.8rem;
-        height: 9.8rem;
-        left: -7rem;
-        top: 3.5rem;
-        z-index: 1; }
-        @media screen and (max-width: 1536px) {
-          .btns-contact .social-btns__calltome--img2 {
-            left: 5rem; } }
-        @media screen and (max-width: 1280px) {
-          .btns-contact .social-btns__calltome--img2 {
-            left: 4rem; } }
-        @media screen and (max-width: 640px) {
-          .btns-contact .social-btns__calltome--img2 {
-            width: 14.8rem;
-            height: 6.8rem; } }
       .btns-contact .social-btns__calltome--img3 {
         position: absolute;
-        width: 3rem;
-        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 6rem;
+        height: 6rem;
         left: -3.2rem;
-        top: 6.5rem;
-        z-index: 1; }
-        @media screen and (max-width: 1536px) {
-          .btns-contact .social-btns__calltome--img3 {
-            left: 8.4rem; } }
-        @media screen and (max-width: 1280px) {
-          .btns-contact .social-btns__calltome--img3 {
-            left: 7.5rem; } }
-        @media screen and (max-width: 640px) {
-          .btns-contact .social-btns__calltome--img3 {
-            top: 5.3rem;
-            left: 6rem;
-            width: 2.5rem;
-            height: 2.5rem; } }
+        top: 0rem;
+        z-index: 1;
+        background-color: var(--color-primary);
+        border-radius: 50%; }
       .btns-contact .social-btns__calltome .numberphone {
-        position: absolute;
         left: 1rem;
         top: 7.2rem;
         font-weight: 700;
@@ -9303,6 +9280,7 @@ button {
         width: 12rem;
         color: var(--color-grey-light-0);
         text-decoration: none;
+        text-align: end;
         z-index: 1; }
         @media screen and (max-width: 1536px) {
           .btns-contact .social-btns__calltome .numberphone {
@@ -9320,6 +9298,7 @@ button {
     .btns-contact .social-btns__social {
       display: flex;
       flex-direction: column;
+      align-items: center;
       margin-right: -10rem;
       z-index: 1; }
       @media screen and (max-width: 1536px) {
@@ -9331,13 +9310,20 @@ button {
       @media screen and (max-width: 1280px) {
         .btns-contact .social-btns__social {
           margin-right: -3rem; } }
-      .btns-contact .social-btns__social img {
+      .btns-contact .social-btns__social .scroll-top {
+        border: none;
+        padding: 2rem 1.2rem;
+        background-color: #EFEFEF;
+        border-radius: 50%;
         width: 5rem;
-        height: 5rem; }
-        @media screen and (max-width: 1280px) {
-          .btns-contact .social-btns__social img {
-            width: 3.5rem;
-            height: 3.5rem; } }
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .2s;
+        visibility: hidden; }
+      .btns-contact .social-btns__social .scroll-active {
+        visibility: visible; }
 
 .pharmacy__authetic--img1, .pharmacy__authetic--img2 {
   width: 4.5rem;
@@ -9792,9 +9778,37 @@ button {
     .display-tabletmobile {
       display: flex; } }
 
+#date {
+  color: var(--color-grey-light-0);
+  font-weight: 300;
+  font-size: 1.3rem;
+  line-height: 3rem; }
+
+.zoom-in-out-box {
+  margin: 24px;
+  width: 50px;
+  height: 50px;
+  filter: blur(20px);
+  border-radius: 50%;
+  background: #f50057;
+  animation: zoom-in-zoom-out 1s ease infinite;
+  position: absolute;
+  top: -1.5rem;
+  left: -5rem;
+  opacity: .6; }
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1); }
+  50% {
+    transform: scale(1.5, 1.5); }
+  100% {
+    transform: scale(1, 1); } }
+
 .footer-main {
   background: linear-gradient(180deg, #cd151c -38.4%, #7b050a 197.99%);
-  height: 49.2rem; }
+  height: 49.2rem;
+  position: relative; }
   @media screen and (max-width: 640px) {
     .footer-main {
       height: 100%; } }
@@ -9807,15 +9821,17 @@ button {
     padding-top: 6.4rem; }
   .footer-main__wrap {
     display: flex;
-    column-gap: 14rem; }
+    column-gap: 10rem;
+    z-index: 1;
+    position: relative; }
     @media screen and (max-width: 1097px) {
       .footer-main__wrap {
-        column-gap: 8rem;
+        column-gap: 3rem;
         display: flex;
         justify-content: space-between; } }
     @media screen and (max-width: 768px) {
       .footer-main__wrap {
-        column-gap: 3rem;
+        column-gap: .5rem;
         display: flex;
         justify-content: space-between; } }
     @media screen and (max-width: 640px) {
@@ -9823,7 +9839,7 @@ button {
         display: grid;
         grid-template-columns: repeat(1, 1fr); } }
   .footer-main__information {
-    flex: 0 0 42%; }
+    flex: 0 0 31%; }
   .footer-main__location {
     margin-bottom: 2.4rem; }
     @media screen and (max-width: 768px) {
@@ -9865,7 +9881,7 @@ button {
   .footer-main__menunav {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: flex-start;
     color: var(--color-grey-light-0); }
     .footer-main__menunav h3, .footer-main__menunav .h3 {
@@ -9930,6 +9946,42 @@ button {
     padding-top: 2.3rem; }
     .footer-main__social .social-internet img {
       margin-right: 0.8rem; }
+
+.footer-after {
+  background-color: var(--color-grey-dark-0); }
+  .footer-after p {
+    color: var(--color-grey-light-0);
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 3rem; }
+
+.circlefooterleft,
+.circlefooterright {
+  position: absolute;
+  top: 0;
+  z-index: 0; }
+  .circlefooterleft img,
+  .circlefooterright img {
+    max-width: 100%; }
+
+.circlefooterleft {
+  left: 0rem; }
+
+.circlefooterright {
+  right: 0rem; }
+
+.cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: .8rem;
+  left: -.5rem;
+  padding: 1.2rem 0rem;
+  padding-left: 2.5rem;
+  padding-right: 1.8rem;
+  background-color: var(--color-primary);
+  border-radius: 9999px; }
 
 .header {
   height: 11.6rem;

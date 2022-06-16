@@ -18,7 +18,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header" id="home">
     <div class="container">
       <div class="header__logo">
         <img src="./img/logo/logo.png" alt="logo 3t" />
@@ -74,7 +74,6 @@
           bản tin sức khoẻ <img src="./img/svg/dropdown.svg" alt="dropdown" />
         </li>
       </ul>
-
       <div class="choosen-health__tablet-mobile">
         <button class="button-open">
           <i class=" fa-solid fa-bars"></i>
@@ -104,7 +103,6 @@
           </ul>
         </div>
       </div>
-
     </div>
     <div id="slider-introduce" class="slider-introduce">
       <div class="swiper mySwiper">
@@ -269,7 +267,7 @@
                 </div>
               </div>
               <div class="pharmacy__easytobuy--card">
-                <img class="pharmacy__easytobuy--img" src="./img/dasDokument.png" alt="document" />
+                <img class="pharmacy__easytobuy--img" src="./img/svg/dasDokument.svg" alt="document" />
                 <div class="pharmacy__easytobuy--title">
                   <h3>Nhập thông tin liên hệ</h3>
                   <p>đơn giản & nhanh chóng</p>
@@ -575,9 +573,14 @@
               <h3>Chứng nhận</h3>
               <div class="footer-main__authetic">
                 <img src="./img/bocongthuongcheck.png" alt="Bo cong thuong check" />
-                <img src="./img/dcmacheck.png" alt="dcma check" />
+                <img src="./img/dmcacheck.png" alt="dcma check" />
               </div>
             </div>
+          </div>
+          <div class="footer-main__menunav">
+            <h3>Tìm hiểu thêm</h3>
+            <p>Giới thiệu</p>
+            <p>Chính sách đổi trả và giao hàng</p>
           </div>
           <div class="footer-main__menunav">
             <h3>Danh mục</h3>
@@ -604,25 +607,45 @@
             </div>
           </div>
         </div>
+        <p class="circlefooterleft">
+          <img src="./img/circlefooter.png" alt="circlefooter">
+        </p>
+        <p class="circlefooterright">
+          <img src="./img/circlefooter2.png" alt="circlefooter2">
+        </p>
+      </div>
+    
+    </div>
+  
+    <div class="footer-after">
+      <div class="container">
+        <p>Design by GCO Software <span id="date">2022</span></p>
       </div>
     </div>
-
-    <div class="footer-after"></div>
   </footer>
 
   <div class="btns-contact">
     <div class="social-btns container">
       <div class="social-btns__calltome">
-        <img class="social-btns__calltome--img2" src="./img/clicktocall.png" alt="call to me" />
-        <img class="social-btns__calltome--img3" src="./img/svg/Call.svg" alt="call ring" />
-        <div class="cover"><a class="numberphone" href="tel:0939129889">0939 129 889</a></div>
+        <!-- <p class="social-btns__calltome--img2">
+          <img src="./img/clicktocall.png" alt="call to me" />
+         
+        </p>-->
+        <p class="social-btns__calltome--img3" >
+          <img src="./img/svg/Call.svg" alt="call ring" />
+          <div class="zoom-in-out-box"></div>
+          <div class="cover"><a class="numberphone" href="tel:0939129889">0939 129 889</a></div>
+        </p>
       </div>
       <div class="social-btns__social">
         <img src="./img/svg/messengerpopup.svg" alt="messengerpopup" />
         <img src="./img/svg/zalopopup.svg" alt="zalopopup" />
-        <img src="./img/svg/popuparrowtop.svg" alt="popuparrowtop" />
+        <button class="scroll-top" href="#home" id="scroll-top">
+          <img src="./img/svg/button-top.svg" alt="popuparrowtop" />
+        </button> 
       </div>
     </div>
+  
   </div>
 
   <script src="./js/main.js"></script>
